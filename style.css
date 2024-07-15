@@ -293,6 +293,10 @@ header .content p {
     width: 100%;
     background-position: center;
   }
+
+  #features .experience {
+    left: 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
