@@ -10,13 +10,133 @@
 
 :root {
   font-family: "Work Sans", sans-serif;
-  --dark-1: #131313;
-  --dark-2: #424242;
-  --dark-3: #727272;
-  --dark-4: #a1a1a1;
-  --dark-5: #d0d0d0;
-  --dark-6: #e7e7e7;
-  --dark-7: #f3f3f3;
-  --white: #ffffff;
-  --primary: #ff900e;
+  --dark-1: 0, 0%, 7%;
+  --dark-2: 0, 0%, 26%;
+  --dark-3: 0, 0%, 45%;
+  --dark-4: 0, 0%, 63%;
+  --dark-5: 0, 0%, 82%;
+  --dark-6: 0, 0%, 91%;
+  --dark-7: 0, 0%, 95%;
+  --white: 0, 0%, 100%;
+  --primary: 32, 100%, 53%;
+}
+
+.fluid {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+.btn {
+  padding: clamp(8px, calc(1.5vw + 2px), 20px) clamp(16px, calc(1vw + 12px), 24px);
+  font-size: clamp(16px, calc(0.5vw + 14px), 20px);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--white));
+}
+
+.btn-secondary {
+  color: hsl(var(--dark-1));
+  background-color: transparent;
+  border: 1px solid hsl(var(--primary));
+}
+
+.container {
+  width: clamp(320px, 80vw, 1440px);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* header section */
+header {
+  padding: 3rem 0;
+  background-color: hsla(var(--primary), 0.1);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .brands {
+  font-size: 2.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+header .nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: clamp(24px, calc(6.41vw - 12.82px), 64px);
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  color: hsl(var(--dark-2));
+}
+
+header .banner {
+  padding-top: 6rem;
+}
+
+header .content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+header .content h1 {
+  font-size: clamp(40px, calc(3vw + 28px), 64px);
+}
+
+header .content p {
+  margin: 2rem 0;
+  color: hsl(var(--dark-3));
+}
+
+@media screen and (max-width: 1200px) {
+  header .brands {
+    font-size: clamp(1.5rem, calc(2vw + 1rem), 2.5rem);
+  }
+
+  header .banner {
+    padding-top: clamp(32px, calc(8vw + 0px), 96px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .content p {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .brands {
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header .nav-links {
+  }
+}
+
+@media screen and (max-width: 576px) {
 }
