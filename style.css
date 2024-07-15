@@ -376,3 +376,13 @@ header .content p {
   text-align: center;
   filter: saturate(0);
 }
+
+/* footer */
+footer.container {
+  margin-bottom: 5rem;
+  padding: clamp(24px, calc(2vw + 16px), 40px) 0;
+  text-align: center;
+  background-color: hsla(var(--primary), 0.1);
+  color: hsl(var(--dark-2));
+  font-size: clamp(16px, calc(0.5vw + 14px), 20px);
+}
